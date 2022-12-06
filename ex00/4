@@ -1,0 +1,24 @@
+#include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap(std::string _name) : name(_name), hit_pts(10), nrg_pts(10), atk_dmg(10)
+{
+	std::cout << "Constructor called, " << name << " is ready to fight !" << std::endl;
+}
+
+Claptrap::~ClapTrap(void)
+{
+	std::cout << "Destructor called, " << name << " is too tired" << std::endl;
+}
+
+void	attack(const std::string& target);
+{
+}
+
+void	takeDamage(unsigned int amount);
+{
+}
+
+void	beRepaired(unsigned int	amount);
+{
+}
+
