@@ -6,7 +6,7 @@
 /*   By: blevrel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 10:39:19 by blevrel           #+#    #+#             */
-/*   Updated: 2022/12/16 15:15:02 by blevrel          ###   ########.fr       */
+/*   Updated: 2022/12/16 15:23:10 by blevrel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef	CLAPTRAP_HPP
@@ -16,7 +16,7 @@
 class ClapTrap
 {
 
-private:
+protected:
 
 	std::string		name;
 	unsigned int	save_hit_pts;
