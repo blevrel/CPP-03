@@ -6,7 +6,7 @@
 /*   By: blevrel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 14:27:52 by blevrel           #+#    #+#             */
-/*   Updated: 2022/12/17 10:03:30 by blevrel          ###   ########.fr       */
+/*   Updated: 2023/01/07 13:41:06 by blevrel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "FragTrap.hpp"
@@ -42,7 +42,7 @@ FragTrap::~FragTrap(void)
 	std::cout << "FragTrap destructor called." << std::endl;
 }
 
-void	FragTrap::highFiveGuys(void)
+void	FragTrap::highFivesGuys(void)
 {
 	std::cout << this->name << ": Give me five guys !" << std::endl;
 }

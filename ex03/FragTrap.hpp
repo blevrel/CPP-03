@@ -6,7 +6,7 @@
 /*   By: blevrel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 14:04:05 by blevrel           #+#    #+#             */
-/*   Updated: 2022/12/17 10:02:03 by blevrel          ###   ########.fr       */
+/*   Updated: 2023/01/07 13:41:14 by blevrel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef FRAGTRAP_HPP
@@ -23,7 +23,7 @@ public:
 	FragTrap(const FragTrap& other);
 	~FragTrap(void);
 	FragTrap& operator=(const FragTrap& other);
-	void	highFiveGuys(void);
+	void	highFivesGuys(void);
 
 };
 

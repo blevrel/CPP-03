@@ -6,7 +6,7 @@
 /*   By: blevrel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 10:39:10 by blevrel           #+#    #+#             */
-/*   Updated: 2022/12/16 15:15:13 by blevrel          ###   ########.fr       */
+/*   Updated: 2023/01/06 18:18:39 by blevrel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ClapTrap.hpp"
@@ -52,7 +52,7 @@ std::string	ClapTrap::getName(void) const
 	return (this->name);
 }
 
-unsigned int	ClapTrap::getSaveHitPts(void) const
+int	ClapTrap::getSaveHitPts(void) const
 {
 	return (this->save_hit_pts);
 }
@@ -108,7 +108,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		std::cout << this->getName() << " is already dead and can't take more damages." << std::endl;
 }
 
-void	ClapTrap::beRepaired(unsigned int amount)
+void	ClapTrap::beRepaired(int amount)
 {
 		if (this->getNrgPts() == 0)
 		{
@@ -117,8 +117,14 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		}
 		if (this->getHitPts() + amount > this->getSaveHitPts())
 		{
-			this->hit_pts = this->getSaveHitPts();
+			if (this->getHitPts() != this->getSaveHitPts())
+			{
+				this->nrg_pts--;
+				this->hit_pts = this->getSaveHitPts();
 			std::cout << this->getName() << " tries to heal for " << amount << " hit points. " << this->getName() << " can't heal over the initial hit points value and now has " << this->getHitPts() << " hit points." << std::endl;
+			}
+			else
+				std::cout << this->getName() << " is already at max hit points" << std::endl;
 			return ;
 		}
 		if (this->getHitPts() == 0)

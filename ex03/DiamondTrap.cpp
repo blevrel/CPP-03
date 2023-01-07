@@ -6,7 +6,7 @@
 /*   By: blevrel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:20:41 by blevrel           #+#    #+#             */
-/*   Updated: 2022/12/17 10:11:52 by blevrel          ###   ########.fr       */
+/*   Updated: 2023/01/07 13:39:51 by blevrel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "DiamondTrap.hpp"
@@ -23,6 +23,10 @@ DiamondTrap::DiamondTrap(std::string _name)
 		FragTrap(_name)
 {
 	this->name = _name;
+	this->save_hit_pts = 100;
+	this->hit_pts = 100;
+	this->nrg_pts = 50;
+	this->atk_dmg = 30;
 	std::cout << "DiamondTrap constructor called." << std::endl;
 }
 
